@@ -7,9 +7,9 @@
 //C: N/A
 //E: N/A
 function min(a, b) { // function w/ a and b as params for numbers to be passed into 
-   if (a < b) return a; // if stmt, a less than b return a value 
-   else return b;// otherwise, return b 
-  
+  // if (a < b) return a; // if stmt, a less than b return a value 
+  // else return b;// otherwise, return b 
+  return a < b ? a:b;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -21,10 +21,11 @@ function min(a, b) { // function w/ a and b as params for numbers to be passed i
 //C: recursion
 //E: Conditional 
 function isEven(n) { // function w/ number as param 
-  if (n == 0) return true; // if value of n is loosely equal 0; rt true 
-  else if (n == 1) return false; // loosely equal to 1 return false 
-  else if (n < 0) return isEven(-n); // negative # return n -1  
-  else return isEven(n - 2); // // return n -2 
+  // if (n == 0) return true; // if value of n is loosely equal 0; rt true 
+  // else if (n == 1) return false; // loosely equal to 1 return false 
+  // else if (n < 0) return isEven(-n); // negative # return negative into positive form param, then  continue through looping until odd #  
+  // else return isEven(n - 2); // // return n -2 
+  return n === 0 ? true: n === 1 ? false: n < 0 ? isEven(-n): isEven(n-2);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
